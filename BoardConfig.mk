@@ -15,18 +15,23 @@
 #
 
 # Inherit from MSM8974 common
--include device/oppo/msm8974-common/BoardConfigCommon.mk
+-include device/pantech/msm8974-common/BoardConfigCommon.mk
+# Include path
+TARGET_SPECIFIC_HEADER_PATH := device/pantech/msm8974-common/include
+
 
 # Kernel
-TARGET_KERNEL_CONFIG := cyanogenmod_bacon_defconfig
-BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=bacon user_debug=31 msm_rtb.filter=0x3F ehci-hcd.park=3 androidboot.bootdevice=msm_sdcc.1
+TARGET_KERNEL_CONFIG := cyanogenmod_a900_defconfig
+BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x3F ehci-hcd.park=3 androidboot.bootdevice=msm_sdcc.1 androidboot.selinux=permissive
+
+# Vendor Init
+TARGET_LIBINIT_DEFINES_FILE := device/pantech/ef60s/init/init_ef60s.c
 
 # Bluetooth
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/oneplus/bacon/bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/pantech/ef60s/bluetooth
 
 # Camera
 USE_DEVICE_SPECIFIC_CAMERA := true
-COMMON_GLOBAL_CFLAGS += -DOPPO_CAMERA_HARDWARE
 
 # Filesystem
 BOARD_BOOTIMAGE_PARTITION_SIZE     := 16777216
@@ -39,13 +44,9 @@ BOARD_USERDATAEXTRAIMAGE_PARTITION_SIZE := 59914792960
 BOARD_USERDATAEXTRAIMAGE_PARTITION_NAME := 64G
 
 # Recovery
-TARGET_RECOVERY_FSTAB := device/oneplus/bacon/rootdir/etc/fstab.bacon
+TARGET_RECOVERY_FSTAB := device/pantech/ef60s/rootdir/etc/fstab.qcom
 
-TARGET_OTA_ASSERT_DEVICE := bacon,A0001
-
-TARGET_INIT_VENDOR_LIB := libinit_bacon
-
-TARGET_WCNSS_MAC_PREFIX := e8bba8
+TARGET_OTA_ASSERT_DEVICE := ef60s,ef61k,ef62l
 
 # Workaround for factory issue
 BOARD_VOLD_CRYPTFS_MIGRATE := true
@@ -56,4 +57,4 @@ AUDIO_FEATURE_LOW_LATENCY_PRIMARY := true
 AUDIO_FEATURE_ENABLED_LOW_LATENCY_CAPTURE := true
 
 # inherit from the proprietary version
--include vendor/oneplus/bacon/BoardConfigVendor.mk
+-include vendor/pantech/ef60s/BoardConfigVendor.mk

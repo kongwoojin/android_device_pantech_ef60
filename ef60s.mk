@@ -21,16 +21,13 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay vendor/extra/overlays/phone-108
 TARGET_SCREEN_HEIGHT := 1920
 TARGET_SCREEN_WIDTH := 1080
 
-# Haters gonna hate..
-PRODUCT_CHARACTERISTICS := nosdcard
 
 # Ramdisk
 PRODUCT_PACKAGES += \
-    libinit_bacon \
-    fstab.bacon \
-    init.bacon.rc \
+    fstab.qcom \
+    init.qcom.rc \
     init.qcom.usb.rc \
-    ueventd.bacon.rc
+    ueventd.qcom.rc
 
 # Audio
 PRODUCT_COPY_FILES += \
@@ -53,16 +50,20 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/libnfc-nxp.conf:system/etc/libnfc-nxp.conf \
     $(LOCAL_PATH)/configs/libnfc-brcm.conf:system/etc/libnfc-brcm.conf
 
-# Recovery
-PRODUCT_EXTRA_RECOVERY_KEYS += \
-    $(LOCAL_PATH)/bacon
+#Keylayout 
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/keylayout/atmel_mxt_540s.kl:system/usr/keylayout/atmel_mxt_540s.kl \
+    $(LOCAL_PATH)/keylayout/cr-tk-300k.kl:system/usr/keylayout/cr-tk-300k.kl \
+    $(LOCAL_PATH)/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
+    $(LOCAL_PATH)/keylayout/stmicro_fts_ts.kl:system/usr/keylayout/stmicro_fts_ts.kl 
+
 
 # System properties
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.default_network=9
 
-# Fuuuuu
-PRODUCT_PACKAGES += camera.bacon
+# Camera
+PRODUCT_PACKAGES += camera.msm8974
 
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal
@@ -75,11 +76,11 @@ $(call inherit-product-if-exists, frameworks/native/build/phone-xxhdpi-2048-dalv
 $(call inherit-product-if-exists, frameworks/native/build/phone-xxhdpi-2048-hwui-memory.mk)
 
 # call the proprietary setup
-$(call inherit-product-if-exists, vendor/oneplus/bacon/bacon-vendor.mk)
+$(call inherit-product-if-exists, vendor/pantech/ef60s/ef60s-vendor.mk)
 
 ifneq ($(QCPATH),)
 $(call inherit-product-if-exists, $(QCPATH)/prebuilt_HY11/target/product/msm8974/prebuilt.mk)
 endif
 
 # Inherit from msm8974-common
-$(call inherit-product, device/oppo/msm8974-common/msm8974.mk)
+$(call inherit-product, device/pantech/msm8974-common/msm8974.mk)
