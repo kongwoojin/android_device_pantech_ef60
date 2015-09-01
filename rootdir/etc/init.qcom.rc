@@ -29,20 +29,20 @@ on init
     mkdir /mnt/media_rw/usbdisk 0700 media_rw media_rw
     mkdir /mnt/media_rw/external_sd 0700 media_rw media_rw
     mkdir /storage/usbdisk 0700 root root
-    mkdir /storage/sdcard1 0700 root root
+    mkdir /storage/external_sd 0700 root root
 
     export EXTERNAL_STORAGE /storage/emulated/legacy
     export EMULATED_STORAGE_SOURCE /mnt/shell/emulated
     export EMULATED_STORAGE_TARGET /storage/emulated
-    export SECONDARY_STORAGE /storage/sdcard1:/storage/usbdisk
+    export SECONDARY_STORAGE /storage/external_sd:/storage/usbdisk
 
     # Support legacy paths
     symlink /storage/emulated/legacy /sdcard
     symlink /storage/emulated/legacy /mnt/sdcard
     symlink /storage/emulated/legacy /storage/sdcard0
     symlink /mnt/shell/emulated/0 /storage/emulated/legacy
-    symlink /storage/sdcard1 /mnt/external_sd
-    symlink /storage/sdcard1 /external_sd
+    symlink /storage/external_sd /mnt/external_sd
+    symlink /storage/external_sd /external_sd
     symlink /storage/usbdisk /usbdisk
     symlink /storage/usbdisk /mnt/usbdisk
 
@@ -58,7 +58,7 @@ on post-fs-data
 service sdcard /system/bin/sdcard -u 1023 -g 1023 -l /data/media /mnt/shell/emulated
     class late_start
 
-service fuse_sdcard1 /system/bin/sdcard -u 1023 -g 1023 -d /mnt/media_rw/sdcard1 /storage/sdcard1
+service fuse_external_sd /system/bin/sdcard -u 1023 -g 1023 -d /mnt/media_rw/external_sd /storage/external_sd
     class late_start
     disabled
 
