@@ -29,6 +29,10 @@ PRODUCT_PACKAGES += \
     init.qcom.usb.rc \
     ueventd.qcom.rc
 
+# Lights
+PRODUCT_PACKAGES += \
+    lights.msm8974
+
 # Audio
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/audio_platform_info.xml:system/etc/audio_platform_info.xml \
@@ -61,9 +65,6 @@ PRODUCT_COPY_FILES += \
 # System properties
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.default_network=9
-
-# Camera
-PRODUCT_PACKAGES += camera.msm8974
 
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal
