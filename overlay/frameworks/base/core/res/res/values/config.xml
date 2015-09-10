@@ -89,11 +89,11 @@
     <bool name="config_lidControlsSleep">true</bool>
 
     <!-- Default color for notification LED is white. -->
-    <color name="config_defaultNotificationColor">#ffffffff</color>
+    <color name="config_defaultNotificationColor">#ff00ff00</color>
 
     <!-- Does the notification LED support multiple colors?
          Used to decide if the user can change the colors -->
-    <bool name="config_multiColorNotificationLed">true</bool>
+    <bool name="config_multiColorNotificationLed">false</bool>
 
     <!-- Does the battery LED support multiple colors?
          Used to decide if the user can change the colors -->
