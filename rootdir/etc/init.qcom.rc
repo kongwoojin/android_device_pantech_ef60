@@ -45,6 +45,28 @@ on init
     symlink /storage/external_sd /external_sd
     symlink /storage/usbdisk /usbdisk
     symlink /storage/usbdisk /mnt/usbdisk
+#For led
+    chmod 0660 /sys/class/leds/lp5523:channel0/brightness
+    chmod 0660 /sys/class/leds/lp5523:channel1/brightness
+    chmod 0660 /sys/class/leds/lp5523:channel2/brightness
+    chmod 0660 /sys/class/leds/lp5523:channel3/brightness
+    chmod 0660 /sys/class/leds/lp5523:channel4/brightness
+    chmod 0660 /sys/class/leds/lp5523:channel5/brightness
+    chmod 0660 /sys/class/leds/lp5523:channel6/brightness
+    chmod 0660 /sys/class/leds/lp5523:channel7/brightness
+    chmod 0660 /sys/class/leds/lp5523:channel8/brightness
+    
+    chown system radio /sys/class/leds/lp5523:channel0/brightness
+    chown system radio /sys/class/leds/lp5523:channel1/brightness
+    chown system radio /sys/class/leds/lp5523:channel2/brightness
+    chown system radio /sys/class/leds/lp5523:channel3/brightness
+    chown system radio /sys/class/leds/lp5523:channel4/brightness
+    chown system radio /sys/class/leds/lp5523:channel5/brightness
+    chown system radio /sys/class/leds/lp5523:channel6/brightness
+    chown system radio /sys/class/leds/lp5523:channel7/brightness
+    chown system radio /sys/class/leds/lp5523:channel8/brightness
+#For nfc
+    symlink /dev/pn547 /dev/pn544
 
 on post-fs
     export_rc /system/etc/init.cne.rc
