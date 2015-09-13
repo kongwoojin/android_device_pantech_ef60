@@ -22,7 +22,7 @@ TARGET_SPECIFIC_HEADER_PATH := device/pantech/msm8974-common/include
 
 # Kernel
 TARGET_KERNEL_CONFIG := cyanogenmod_a900_defconfig
-BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x3F ehci-hcd.park=3 androidboot.bootdevice=msm_sdcc.1 androidboot.selinux=permissive
+BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x3F ehci-hcd.park=3 androidboot.bootdevice=msm_sdcc.1
 
 # Vendor Init
 TARGET_LIBINIT_DEFINES_FILE := device/pantech/ef60s/init/init_ef60s.c
