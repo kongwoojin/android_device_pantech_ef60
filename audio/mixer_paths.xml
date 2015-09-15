@@ -795,7 +795,7 @@
 
     <!-- 2013-12-02 LS3@SND SPK MIC setting -->
     <path name="speaker-mic">
-        <path name="adc4" />
+        <path name="adc3" />
     </path>
 
     <!-- FEATURE_PANTECH_SND_SUBMIC_LOOPBACK -->
