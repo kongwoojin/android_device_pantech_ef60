@@ -1,0 +1,2 @@
+#OTA
+cm.updater.uri=https://raw.githubusercontent.com/hoalamha/CMUpdater-API/cm-14.1/ef60/api.json
