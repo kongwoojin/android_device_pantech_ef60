@@ -1,0 +1,3 @@
+add_lunch_combo lineage_ef60-user
+add_lunch_combo lineage_ef60-userdebug
+add_lunch_combo lineage_ef60-eng
