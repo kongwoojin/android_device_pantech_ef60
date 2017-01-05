@@ -17,4 +17,4 @@ Dimensions | 151.4 x 76.4 x 9.5mm 173g(Black), 174.9g(White)
 Camera  | 13M / 2.1M FULL HD
 
 
-![SKY VEGA SCRECT UP](https://www.pantech.co.kr/cmm/fms/getImage.do?atchFileId=FILE_000000000007125&fileSn=0 "SKY VEGA SCRECT UP")
+![SKY VEGA SCRECT UP](http://file.ivega.co.kr/upload/product/feature/IM_A900S/09.jpg "SKY VEGA SCRECT UP")
