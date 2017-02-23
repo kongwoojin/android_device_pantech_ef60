@@ -19,16 +19,13 @@ PLATFORM_PATH := device/pantech/ef60
 -include device/pantech/msm8974-common/BoardConfigCommon.mk
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := ef60s,ef61k,ef62l
+TARGET_OTA_ASSERT_DEVICE := ef62l,ef60s,ef61k
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(PLATFORM_PATH)/bluetooth
 
 # Kernel
 TARGET_KERNEL_CONFIG := LineageOS_ef60_defconfig
-
-# Properties
-TARGET_SYSTEM_PROP += $(PLATFORM_PATH)/system.prop
 
 # Filesystem
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 11757140992
