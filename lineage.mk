@@ -27,9 +27,12 @@ $(call inherit-product-if-exists, vendor/pantech/ef60/ef60-vendor.mk)
 PRODUCT_NAME := lineage_ef60
 PRODUCT_DEVICE := ef60
 PRODUCT_MANUFACTURER := PANTECH
-PRODUCT_MODEL := IM-A900
+PRODUCT_MODEL := Vega Secrect UP
 
 PRODUCT_BRAND := PANTECH
 TARGET_VENDOR := PANTECH
 TARGET_VENDOR_PRODUCT_NAME := ef60
 TARGET_VENDOR_DEVICE_NAME := ef60
+
+# Enable SU
+WITH_SU := true
