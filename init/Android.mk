@@ -21,7 +21,7 @@ include $(CLEAR_VARS)
 LOCAL_MODULE_TAGS := optional
 LOCAL_C_INCLUDES := system/core/init
 LOCAL_CFLAGS := -Wall -DANDROID_TARGET=\"$(TARGET_BOARD_PLATFORM)\"
-LOCAL_SRC_FILES := init_ef60.cpp
-LOCAL_MODULE := libinit_ef60
+LOCAL_SRC_FILES := init_ef65.cpp
+LOCAL_MODULE := libinit_ef65
 
 include $(BUILD_STATIC_LIBRARY)

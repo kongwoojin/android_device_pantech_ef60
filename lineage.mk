@@ -15,24 +15,24 @@
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit from ef60 device
-$(call inherit-product, device/pantech/ef60/ef60.mk)
+# Inherit from ef65 device
+$(call inherit-product, device/pantech/ef65/ef65.mk)
 
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
 # Call the proprietary setup
-$(call inherit-product-if-exists, vendor/pantech/ef60/ef60-vendor.mk)
+$(call inherit-product-if-exists, vendor/pantech/ef65/ef65-vendor.mk)
 
-PRODUCT_NAME := lineage_ef60
-PRODUCT_DEVICE := ef60
+PRODUCT_NAME := lineage_ef65
+PRODUCT_DEVICE := ef65
 PRODUCT_MANUFACTURER := PANTECH
-PRODUCT_MODEL := Vega Secrect UP
+PRODUCT_MODEL := IM-A920
 
 PRODUCT_BRAND := PANTECH
 TARGET_VENDOR := PANTECH
-TARGET_VENDOR_PRODUCT_NAME := ef60
-TARGET_VENDOR_DEVICE_NAME := ef60
+TARGET_VENDOR_PRODUCT_NAME := ef65
+TARGET_VENDOR_DEVICE_NAME := ef65
 
 # Enable SU
 WITH_SU := true

@@ -14,18 +14,18 @@
 # limitations under the License.
 #
 
-PLATFORM_PATH := device/pantech/ef60
+PLATFORM_PATH := device/pantech/ef65
 # Inherit from msm8974-common
 -include device/pantech/msm8974-common/BoardConfigCommon.mk
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := ef62l,ef60s,ef61k
+TARGET_OTA_ASSERT_DEVICE := ef65,ef65s
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(PLATFORM_PATH)/bluetooth
 
 # Kernel
-TARGET_KERNEL_CONFIG := LineageOS_ef60_defconfig
+TARGET_KERNEL_CONFIG := LineageOS_ef65_defconfig
 
 # Properties
 TARGET_SYSTEM_PROP += $(PLATFORM_PATH)/system.prop
@@ -45,5 +45,5 @@ BOARD_NFC_CHIPSET := pn547
 NXP_CHIP_TYPE := 1
 
 # Init
-TARGET_INIT_VENDOR_LIB := libinit_ef60
-TARGET_RECOVERY_DEVICE_MODULES := libinit_ef60
+TARGET_INIT_VENDOR_LIB := libinit_ef65
+TARGET_RECOVERY_DEVICE_MODULES := libinit_ef65

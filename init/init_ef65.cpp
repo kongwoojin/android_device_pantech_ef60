@@ -61,17 +61,5 @@ void vendor_load_properties()
     }
 
     property_set("ro.product.model", device_buf);
-
-    if (strstr(device_buf, "IM-A900S")) 
-    {
-        property_set("ro.product.device", "ef60s");
-    } 
-    else if (strstr(device_buf, "IM-A900K")) 
-    {
-        property_set("ro.product.device", "ef61k");
-    } 
-    else if (strstr(device_buf, "IM-A900L"))
-    {
-        property_set("ro.product.device", "ef62l");
-    }
+    property_set("ro.product.device", "ef65s");
 }
